@@ -1,0 +1,21 @@
+<div class="col-sm-12 contact-form">
+    <%= form_tag do %>
+        <div class="form-group">
+            <%= label_tag :testimonial, 'Mensagem', class: 'sr-only' %>
+            <%= text_area_tag :testimonial, nil, id: 'contact-message', class: 'contact-message', placeholder: 'Mensagem...' %>
+        </div>
+
+        <div id="author" class="form-group">
+            <%= label_tag :name, 'Nome', class: 'sr-only' %>
+            <%= text_field_tag :name, nil, id: 'contact-name', class: 'contact-name', placeholder: 'Nome do autor...' %>
+        </div>
+
+        <div class="error-message"></div>
+
+        <%= button_tag 'Assinar', type: 'button', id: 'add-testimonial', class: 'btn', onclick: 'javascript:window.signAlone(event);' %>
+        <%= button_tag 'Assinar com Facebook', type: 'button', id: 'add-testimonial-facebook', class: 'btn', onclick: 'javascript:window.signWithFacebook(event);' %>
+
+        <div class="singAloneOption">Para assinar sem usar o Facebook <%= link_to 'clique aqui', 'javascript:window.goToSingAlone(event);' %>.</div>
+        <div class="singFacebookOption">Para assinar usando o Facebook <%= link_to 'clique aqui', 'javascript:window.goToSingFacebook(event);' %>.</div>
+    <% end %>
+</div>

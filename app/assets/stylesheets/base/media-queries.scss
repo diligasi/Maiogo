@@ -1,0 +1,76 @@
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    body .show-menu, body .hide-menu { right: 50px; }
+
+    body .home-section p { padding: 0 120px; }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    body .timer .days-wrapper, body .timer .hours-wrapper, body .timer .minutes-wrapper, body .timer .seconds-wrapper {
+        width: 140px;
+        height: 140px;
+        margin: 0 7px;
+        padding-top: 20px;
+        -moz-border-radius: 70px;
+        -webkit-border-radius: 70px;
+        border-radius: 70px;
+    }
+    body .timer .days, body .timer .hours, body .timer .minutes, body .timer .seconds { font-size: 60px; line-height: 70px; }
+
+    body .home-section p, body .section-description p, body .our-motto .our-motto-text { padding: 0; }
+
+}
+
+@media (max-width: 991px) {
+
+	body .show-menu { right: 30px; }
+    body .hide-menu { position: static; top: auto; right: auto; z-index: auto; }
+    body .hide-menu a { padding-top: 0; }
+
+}
+
+@media (max-width: 767px) {
+
+    body h2.our-name { font-size: 4.063em; height: auto; }
+
+    body h2, body  h3 { font-size: 36px; padding: 0 20px; }
+
+    body .home-section p, body .section-description p, body .our-motto .our-motto-text { padding: 0; }
+
+    body .timer .days-wrapper, body .timer .hours-wrapper, body .timer .minutes-wrapper, body .timer .seconds-wrapper {
+        width: 140px;
+        height: 140px;
+        margin: 7px;
+        padding-top: 20px;
+        -moz-border-radius: 70px;
+        -webkit-border-radius: 70px;
+        border-radius: 70px;
+    }
+    body .timer .days, body .timer .hours, body .timer .minutes, body .timer .seconds { font-size: 60px; line-height: 70px; }
+
+    body .contact-form, body .contact-address { text-align: center; }
+    body .contact-form { padding-bottom: 40px; }
+    body .contact-address { padding-bottom: 0; }
+
+    body .footer-copyright p, body .footer-social { text-align: center; }
+    body .footer-social { margin-top: 15px; }
+
+}
+
+@media (max-width: 550px) {
+
+    body .subscribe form input { width: 90% !important; }
+    body .subscribe form button { width: 90%; margin-top: 10px; }
+
+}
+
+@media (max-width: 400px) {
+
+    body .show-menu { right: 10px; }
+
+    body h2.our-name { font-size: 3.250em; }
+
+}

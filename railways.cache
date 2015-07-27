@@ -1,0 +1,16 @@
+                        Prefix Verb     URI Pattern                         Controller#Action
+                  testimonials GET      /testimonials(.:format)             testimonials#index
+                               POST     /testimonials(.:format)             testimonials#create
+               new_testimonial GET      /testimonials/new(.:format)         testimonials#new
+              edit_testimonial GET      /testimonials/:id/edit(.:format)    testimonials#edit
+                   testimonial GET      /testimonials/:id(.:format)         testimonials#show
+                               PATCH    /testimonials/:id(.:format)         testimonials#update
+                               PUT      /testimonials/:id(.:format)         testimonials#update
+                               DELETE   /testimonials/:id(.:format)         testimonials#destroy
+autocomplete_static_page_index GET      /static_page/autocomplete(.:format) static_page#autocomplete
+                               GET|POST /auth/:provider/callback(.:format)  sessions#create
+                  auth_failure GET|POST /auth/failure(.:format)             redirect(301, /)
+                       signout GET|POST /signout(.:format)                  sessions#destroy
+                    find_guest POST     /find_guest(.:format)               static_page#find_guest
+                 confirm_guest POST     /confirm_guest(.:format)            static_page#confirm_guest
+                          root GET      /                                   static_page#index

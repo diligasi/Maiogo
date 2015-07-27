@@ -1,0 +1,57 @@
+.confirmation {
+  margin-top: 90px;
+  margin-bottom: 90px;
+  text-align: center;
+}
+
+.confirmation h3 {
+  font-size: 46px;
+  font-weight: 100;
+  color: #555;
+  line-height: 50px;
+}
+
+.confirmation p {
+  margin-top: 30px;
+  font-size: 22px;
+  color: #888;
+  line-height: 36px;
+}
+
+.confirmation form {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.confirmation form input {
+  width: 362px;
+  height: 52px;
+}
+
+.success-message, .error-message {
+  font-size: 22px;
+  color: #888;
+  line-height: 36px;
+}
+
+.success-message {
+  margin: 20px 0 10px 0;
+  color: #4F8A10;
+}
+
+.error-message {
+  margin: 10px 0;
+  color: #e8643e;
+}
+.confirm-info {
+  font-size: 22px;
+  color: #888;
+  line-height: 36px;
+}
+.form-row {
+  margin-bottom: 30px;
+  width: 100%;
+}
+#accompanying_number {
+  width: 60px;
+}

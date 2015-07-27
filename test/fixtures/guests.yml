@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  accompanying_number: 1
+  is_confirmed: false
+
+two:
+  name: MyString
+  accompanying_number: 1
+  is_confirmed: false

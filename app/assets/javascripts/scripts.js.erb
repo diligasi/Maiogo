@@ -1,0 +1,51 @@
+jQuery(document).ready(function() {
+
+    $(".gift-section").css({'height':($(window).height())+'px'});
+    $(".about-us").css({'height':($(window).height())+'px'});
+
+    // Top menu
+	$('.show-menu a, .hide-menu a').tooltip();
+
+	// show/hide menu
+	$('.show-menu a').on('click', function(e) {
+		e.preventDefault();
+		$(this).fadeOut(100, function(){ $('nav').slideDown(); });
+	});
+
+    $('.hide-menu a').on('click', function(e) {
+		e.preventDefault();
+		$('nav').slideUp(function(){ $('.show-menu a').fadeIn(); });
+	});
+
+	// navigation
+	$('nav a').on('click', function(e) {
+		e.preventDefault();
+		var element_class = $(this).attr('class');
+		var scroll_to = 0;
+		var nav_height = $('nav').height();
+		if(element_class == 'menu-top') { scroll_to = $(".home-section").offset().top; }
+		else if(element_class == 'menu-testimonials') { scroll_to = $(".testimonials").offset().top - nav_height - 60; }
+		else if(element_class == 'menu-gift') { scroll_to = $(".gift-section").offset().top - nav_height; }
+		else if(element_class == 'menu-confirmation') { scroll_to = $(".confirmation").offset().top - nav_height - 80; } // TODO: procurar subscribe
+		else if(element_class == 'menu-about-us') { scroll_to = $(".about-us").offset().top - nav_height; } // whos-behind
+		else if(element_class == 'menu-contact') { scroll_to = $(".contact").offset().top - nav_height - 60; }
+		
+		if($(window).scrollTop() != scroll_to && element_class !== undefined) {
+			$('html, body').animate({scrollTop: scroll_to}, 1000);
+		}
+	});
+	
+    // Background slideshow
+    $('.gift-section').backstretch("<%= asset_path('backgrounds/2.jpg') %>");
+    $('.whos-behind-container').backstretch("<%= asset_path('backgrounds/4.jpg') %>");
+
+    // Countdown initializer
+    var countTo = "2015/09/12";
+    $('.timer').countdown(countTo, function(event) {
+    	$(this).find('.days').text(event.offset.totalDays);
+    	$(this).find('.hours').text(event.offset.hours);
+    	$(this).find('.minutes').text(event.offset.minutes);
+    	$(this).find('.seconds').text(event.offset.seconds);
+    });
+});
+

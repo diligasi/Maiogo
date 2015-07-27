@@ -1,0 +1,69 @@
+<!----------------------------------------------
+                  _______   _______
+                 /  __   | |   __  \
+                /  /  |__| |__|  \  \
+               /  /               \  \
+              /  /                 \  \
+              \  \                 /  /
+               \  \    __   __    /  /
+                \  \__|  | |  |__/  /
+                 \_______| |_______/
+       __                  __      __
+     ||  \\  [] ||    [] ||  \\  ||   \\      //
+     ||   \\ || ||    || ||   \\ ||__  \\    //
+     ||   // || ||    || ||   // ||     \\  //
+     ||__//  || ||___ || ||__//  ||__    \\//
+
+----------------------------------------------->
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <%= csrf_meta_tags %>
+
+        <title>♥ Maiara & Diogo ♥</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rouge+Script" type="text/css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,100italic,300italic,400italic,700,700italic">
+        <%= stylesheet_link_tag    'application', media: 'screen, projection', 'data-turbolinks-track' => true %>
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the pae via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Favicon and touch icons -->
+        <%= favicon_link_tag image_url('favicon.ico') %>
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<%= asset_path 'apple-touch-icon-144-precomposed.png' %>">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<%= asset_path 'apple-touch-icon-114-precomposed.png' %>">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<%= asset_path 'apple-touch-icon-72-precomposed.png' %>">
+        <link rel="apple-touch-icon-precomposed" href="<%= asset_path 'apple-touch-icon-57-precomposed.png' %>">
+    </head>
+
+    <body>
+        <!-- Top menu -->
+        <%= render 'layouts/nav' %>
+
+        <!-- Page content -->
+        <%= yield %>
+
+        <!-- Lightbox and testimonial add button -->
+        <%= render 'layouts/add_testimonial' %>
+        <%= render 'layouts/lightbox' %>
+
+        <!-- Page footer -->
+        <%= render 'layouts/footer' %>
+
+        <!-- Load screen -->
+        <div id="loader-wrapper">
+            <div id="loader"></div>
+        </div>
+
+        <!-- Javascript -->
+        <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    </body>
+</html>

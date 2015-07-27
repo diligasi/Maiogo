@@ -1,0 +1,71 @@
+#lightbox {
+  /** Hide the lightbox */
+  opacity: 0;
+
+  /** Apply basic lightbox styling */
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  top: -100%;
+  left: 0;
+  color: #333333;
+  -webkit-transition: opacity .5s ease-in-out;
+  -moz-transition: opacity .5s ease-in-out;
+  -o-transition: opacity .5s ease-in-out;
+  transition: opacity .5s ease-in-out;
+
+  .box {
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+    //min-width:500px;
+    min-width:32%;
+    margin: 10% auto;
+    padding:10px 20px 10px 20px;
+    background-color:#FFF;
+    box-shadow: 0px 1px 26px -3px #777777;
+  }
+
+  .title {
+    margin:0;
+    padding:0 0 10px 0px;
+    border-bottom:1px #ccc solid;
+    font-size:22px;
+  }
+
+  .lightbox_content {
+    display:block;
+    position:relative;
+  }
+
+  .lightbox_close {
+    display:block;
+    float:right;
+    text-decoration:none;
+    font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size:22px;
+    color:#858585;
+  }
+}
+#contact-message {
+  width: 100% !important;
+}
+.contact-form, .contact-address {
+  padding-bottom: 15px !important;
+}
+#add-testimonial-facebook {
+  position: relative;
+  right: -11px;
+}
+#contact-message {
+  line-height: 25px;
+  text-align: justify;
+}
+#author,
+.contact-form .error-message {
+  display: none;
+}
+#author .contact-name {
+  width: 100%;
+}

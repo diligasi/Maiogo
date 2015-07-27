@@ -1,0 +1,17 @@
+jQuery(document).ready(function() {
+    // Para garantir que a altura deste container seja igual a altura do viewport do navegador
+    $(".home-section").css({'height': ($(window).height()) + 'px'});
+
+    // Controla as imagens que aparecem no background além de também controlar o tempo de
+    // exibição de cada uma e a velocidade do efeito de transição entre elas
+    $('.home-section').backstretch([
+        "<%= asset_path('backgrounds/23.jpg') %>",
+        "<%= asset_path('backgrounds/40.jpg') %>",
+        "<%= asset_path('backgrounds/51.jpg') %>",
+        "<%= asset_path('backgrounds/67.jpg') %>",
+        "<%= asset_path('backgrounds/47.jpg') %>",
+        "<%= asset_path('backgrounds/103.jpg') %>",
+        "<%= asset_path('backgrounds/148.jpg') %>",
+        "<%= asset_path('backgrounds/207.jpg') %>"
+    ], {duration: 5000, fade: 750});
+});

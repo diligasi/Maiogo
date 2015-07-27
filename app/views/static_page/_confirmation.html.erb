@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 subscribe confirmation">
+            <h3>Confirmação de presença</h3>
+            <p>Insira no campo abaixo seu nome conforme impresso no convite:</p>
+
+            <%= form_tag(nil, id: 'check-name', class: 'form-inline') do %>
+                <div class="form-group">
+                    <%= text_field_tag :name, params[:name], id: 'confirmation-name', placeholder: 'Nome no convite...' %>
+                </div>
+                <%= button_tag 'Buscar', type: 'submit', id: 'find-guest', class: 'btn' %>
+            <% end %>
+
+            <%= form_tag(nil, id: 'confirm-name', class: 'form-inline') do %>
+                <%= hidden_field_tag :guest_id %>
+                <div class="form-group">
+                    <div class="form-row">
+                        <%= label_tag :confirmation_name, 'Nome', class: 'confirm-info' %>
+                        <%= text_field_tag :confirmation_name, nil, class: 'confirmation-name', readonly: true %>
+                    </div>
+
+                    <div class="form-row">
+                        <%= label_tag :accompanying_number, 'Nº de acompanhantes', class: 'confirm-info' %>
+                        <%= text_field_tag :accompanying_number, nil, class: 'accompanying_number', type: 'number' %>
+                        <%= button_tag 'Confirmar', type: 'submit', id: 'confirm-guest', class: 'btn' %>
+                    </div>
+                </div>
+            <% end %>
+
+            <div class="success-message"></div>
+            <div class="error-message"></div>
+            <div class="warn-message"></div>
+        </div>
+    </div>
+</div>
