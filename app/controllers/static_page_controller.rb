@@ -32,7 +32,7 @@ class StaticPageController < ApplicationController
   end
 
   def autocomplete
-    @guests_names = Guest.order(:name).where('name like ?', "%#{params[:term]}%")
+    @guests_names = Guest.order(:name).where('upper(name) like ?', "%#{params[:term].upcase}%")
     respond_to do |format|
       format.html
       format.json {
