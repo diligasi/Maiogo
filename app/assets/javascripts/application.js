@@ -21,6 +21,7 @@
     $(window).load(function(){
         $('#loader-wrapper').fadeOut('slow', function(){
             $(this).remove();
+            $('body').css('overflow-y', 'auto');
         });
     });
 

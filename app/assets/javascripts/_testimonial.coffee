@@ -20,11 +20,12 @@ jQuery(document).ready ->
       $(this).fadeIn 400
       return
 
-#    $('div[data-href]').data 'href', $(this).data('tag')
-    $('div[data-href]').data 'href', $(element).data('tag')
-#    $('div[data-href]').attr 'data-href', $(this).data('tag')
-#    target = $('div[data-href]')
-#    target.removeAttr('data-href').attr 'data-href', $(this).data('tag')
+    like_href = $('#t-like').data('href')
+    new_link = like_href.substring(0, like_href.length - 1) + $(element).data('id')
+    like_element = $('#t-like')[0]
+    like_element.innerHTML = ''
+    like_element.innerHTML = '<div id="t-like" class="fb-like bottom20"><fb:like href="' + new_link + '" layout="button_count" show_faces="true" share="false"></fb:like></div>'
+    FB.XFBML.parse like_element
     return
   return
 

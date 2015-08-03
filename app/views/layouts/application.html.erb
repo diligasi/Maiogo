@@ -45,6 +45,13 @@
     </head>
 
     <body>
+        <% if current_page?('/') %>
+            <!-- Load screen -->
+            <div id="loader-wrapper">
+                <div id="loader"></div>
+            </div>
+        <% end %>
+
         <!-- Top menu -->
         <%= render 'layouts/nav' %>
 
@@ -57,11 +64,6 @@
 
         <!-- Page footer -->
         <%= render 'layouts/footer' %>
-
-        <!-- Load screen -->
-        <div id="loader-wrapper">
-            <div id="loader"></div>
-        </div>
 
         <!-- Javascript -->
         <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
