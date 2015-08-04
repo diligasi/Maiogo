@@ -1,6 +1,7 @@
 jQuery(document).ready(function() {
     // Para garantir que a altura deste container seja igual a altura do viewport do navegador
-    $(".home-section").css({'height': ($(window).height()) + 'px'});
+    if ($(".home-section").height() < $(window).height())
+        $(".home-section").css({'height': ($(window).height()) + 'px'});
 
     // Controla as imagens que aparecem no background além de também controlar o tempo de
     // exibição de cada uma e a velocidade do efeito de transição entre elas

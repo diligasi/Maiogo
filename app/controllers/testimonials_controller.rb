@@ -1,5 +1,6 @@
 class TestimonialsController < ApplicationController
   before_action :set_testimonial, only: [:show, :edit, :update, :destroy]
+  before_action :can_go, only: [:index, :edit, :update, :destroy]
 
   # GET /testimonials
   # GET /testimonials.json
@@ -71,4 +72,8 @@ class TestimonialsController < ApplicationController
     def testimonial_params
       params.require(:testimonial).permit(:name, :testimonial, :provider, :picture)
     end
+
+  def can_go
+    redirect_to root_path
+  end
 end

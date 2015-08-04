@@ -1,24 +1,23 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 testimonials">
+            <h3>Declarações de amizade!</h3>
+            <div class="testimonial-active"></div>
+            <div class="testimonial-quote">&ldquo; &rdquo;</div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @testimonial.name %>
-</p>
+            <div class="testimonial-single">
+                <p>
+                    <%= @testimonial.testimonial %>
+                    <br />
+                    <a href="<%= @testimonial.profile %>"><%= @testimonial.name %></a>
+                </p>
+                <div class='testimonial-single-image'>
+                    <img src="<%= @testimonial.picture %>" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-<p>
-  <strong>Testimonial:</strong>
-  <%= @testimonial.testimonial %>
-</p>
-
-<p>
-  <strong>Provider:</strong>
-  <%= @testimonial.provider %>
-</p>
-
-<p>
-  <strong>Picture:</strong>
-  <%= @testimonial.picture %>
-</p>
-
-<%= link_to 'Edit', edit_testimonial_path(@testimonial) %> |
-<%= link_to 'Back', testimonials_path %>
+<%#= link_to 'Edit', edit_testimonial_path(@testimonial) %> |
+<%#= link_to 'Back', testimonials_path %>
